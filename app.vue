@@ -1,19 +1,15 @@
 <template>
-  <div>
-    <!-- <NuxtWelcome /> -->
-    <h1>
-      <ADButton :txt="'alo'" />
-    </h1>
-  </div>
+  <p>
+    <ADButton :txt="'Test Button'">
+      <template v-slot:header>
+        {{ 'Slot Header' }}
+      </template>
+      <template v-slot:content>
+        {{ 'Slot Content' }}
+      </template>
+      <template v-slot:footer>
+        {{ 'Slot Footer' }}
+      </template>
+    </ADButton>
+  </p>
 </template>
-
-<script>
-import ADButton from './components/ADButton.vue';
-
-export default {
-  name: 'App',
-  components: {
-    ADButton,
-  },
-};
-</script>
